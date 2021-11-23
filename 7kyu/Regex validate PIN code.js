@@ -10,17 +10,5 @@
 
 // My solution
 function validatePIN(pin) {
-    if(pin !== isNaN(pin) && 
-    pin > 0 && 
-    Number.isInteger(pin) && 
-    (pin.toString().length == 4 || 
-    pin.toString().length == 6)) {
-        return true;
-    } else {
-        return false;
-    }
+    return /^(\d{4}|\d{6})$/.test(pin);
 }
-
-console.log(validatePIN('1234'));
-
-console.log(-1.234 > 0);
