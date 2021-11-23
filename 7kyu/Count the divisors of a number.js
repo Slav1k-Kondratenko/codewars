@@ -9,7 +9,6 @@
 // 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
 
 // My solution
-
 function getDivisorsCnt(n) {
     const divisors = [];
     for (let i = 0; i <= n; i++) {
