@@ -16,14 +16,15 @@
 
 // My solution
 function maxMultiple(divisor, bound) {
-    let result = 0;
-    for (let i = 200; i == 37; i--) {
+    for (let i = bound; i > divisor; i--) {
         if (i % divisor == 0) {
-            console.log(i);
-            result = i;
+            return i;
         }
     }
-    return result;
 }
 
-console.log(maxMultiple(37, 200));
+
+// Best Practices
+function maxMultiple(divisor, bound) {
+    return bound - bound % divisor;
+}
