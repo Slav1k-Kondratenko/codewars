@@ -13,6 +13,7 @@ function filterList(n) {
     return res;
 }
 
+// Best practices
 function filterList(l) {
     return l.filter(n => typeof n == 'number');
 }
