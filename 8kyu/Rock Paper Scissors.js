@@ -13,23 +13,19 @@
 const rps = (p1, p2) => {
     let mgs = 'Draw!';
 
-    if (p1 == 'scissors' && p2 == 'paper') {
+    if (p1 == p2) {
+        return mgs;
+    } else if (p1 == 'scissors' && p2 == 'paper') {
         mgs = 'Player 1 won!';
         return mgs;
     } else if (p1 == 'scissors' && p2 == 'rock') {
         mgs = 'Player 2 won!';
-        return mgs;
-    } else if (p1 == 'scissors' && p2 == 'scissors') {
         return mgs;
     } else if (p1 == 'paper' && p2 == 'rock') {
         mgs = 'Player 1 won!';
         return mgs;
     } else if (p1 == 'paper' && p2 == 'scissors') {
         mgs = 'Player 2 won!';
-        return mgs;
-    } else if (p1 == 'paper' && p2 == 'paper') {
-        return mgs;
-    } else if (p1 == 'rock' && p2 == 'rock') {
         return mgs;
     } else if (p1 == 'rock' && p2 == 'scissors') {
         mgs = 'Player 1 won!';
@@ -46,7 +42,11 @@ const rpsBest = (p1, p2) => {
     if (p1 === p2) {
         return "Draw!";
     }
-    const rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+    const rules = {
+        rock: "scissors",
+        paper: "rock",
+        scissors: "paper"
+    };
     if (p2 === rules[p1]) {
         return "Player 1 won!";
     } else {
