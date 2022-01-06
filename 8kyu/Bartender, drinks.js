@@ -29,9 +29,5 @@ function getDrinkByProfession(param) {
         'Rapper': "Cristal"
     };
 
-    if (menu[param] == undefined) {
-        return 'Beer';
-    }
-
-    return menu[param];
+    return menu[param] || 'Beer';
 }
