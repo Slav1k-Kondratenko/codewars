@@ -37,5 +37,3 @@ function parse(data) {
     }
     return result;
 }
-
-console.log(parse("iiisdoso"));
