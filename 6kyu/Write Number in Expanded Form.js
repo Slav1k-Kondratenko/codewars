@@ -16,6 +16,7 @@ function expandedForm(num) {
     for (let i = 1; i < num.length; i++) {
         if (num[i] > 0) {
             result = `${result} + ${num[i] * Math.pow(10, (num.length - 1) - i)}`
+            
         }
     }
     return String(result);
